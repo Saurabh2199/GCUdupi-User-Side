@@ -61,6 +61,7 @@ class _UserHistoryState extends State<UserHistory> {
 
   @override
   Widget build(BuildContext context) {
+    DateTime date =DateTime.now();
     return isLoad ? loadWidget() :ListView.builder(
       itemCount: userList.length,
       itemBuilder: (context, index) {
@@ -69,8 +70,9 @@ class _UserHistoryState extends State<UserHistory> {
           child: ListTile(
             leading: Icon(Icons.timelapse,color: Color(0xff00B198),),
             title: Text(DateFormat("EEEE").format(_date)),
-            subtitle: Text(DateFormat("h:mm a").format(_date)),
-            trailing: Text(DateFormat("dd-MM-yyyy").format(_date)),
+            subtitle: Text(DateFormat("h:mm a").format(_date),style: TextStyle(color: Color(0xff00B198),),),
+            trailing: Text((DateFormat("dd-MM-yyyy").format(date) == DateFormat("dd-MM-yyyy").format(_date))?'Today':DateFormat("dd-MM-yyyy").format(_date),
+              style: TextStyle(color: (DateFormat("dd-MM-yyyy").format(date) == DateFormat("dd-MM-yyyy").format(_date))?Colors.black:Colors.grey),),
           ),
         );
       },

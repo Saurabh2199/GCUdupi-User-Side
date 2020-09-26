@@ -41,7 +41,6 @@ class HomeScreen extends StatelessWidget{
                 child: ListTile(
                   title: Text(titles[index].toUpperCase(),style: TextStyle(color:(titles[index] == DateFormat('EEEE').format(date))?Colors.white:Colors.black),),
                   subtitle: Text((titles[index] == DateFormat('EEEE').format(date))?'Today':'',style: TextStyle(color:(titles[index] == DateFormat('EEEE').format(date))?Colors.white:Colors.black),),
-                  //trailing: CircleAvatar(backgroundImage: AssetImage(images[index],),backgroundColor: Colors.transparent,),
                   trailing: Container(child: Image.asset(images[index],width: 40,height: 40,),),
                 ),
               );

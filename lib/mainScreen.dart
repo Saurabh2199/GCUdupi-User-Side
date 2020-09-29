@@ -19,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return ViewModelBuilder<MainViewModel>.reactive(
       builder: (context, model, child) => Scaffold(
-        appBar: AppBar(title: Text('Username'),backgroundColor: Color(0xff00B198),actions: <Widget>[
+        appBar: AppBar(title: Text('udp17105'),backgroundColor: Color(0xff00B198),actions: <Widget>[
           IconButton(
             icon: Icon(
               Icons.map,

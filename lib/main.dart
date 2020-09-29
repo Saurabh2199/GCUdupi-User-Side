@@ -4,6 +4,7 @@ import 'package:garbage_collector_user/navBarScreens/homeScreen.dart';
 import 'package:garbage_collector_user/mainScreen.dart';
 import 'package:garbage_collector_user/navBarScreens/userHistory.dart';
 import 'package:garbage_collector_user/splashScreen.dart';
+import 'package:garbage_collector_user/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,12 +21,13 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: MainScreen(),
+      home: SplashScreen(),
       routes: {
         MainScreen.routeName:(ctx)=>MainScreen(),
         HomeScreen.routeName:(ctx)=>HomeScreen(),
         UserHistory.routeName:(ctx)=>UserHistory(),
         MapSample.routeName:(ctx)=>MapSample(),
+        SplashScreen.routeName:(ctx)=>SplashScreen(),
       },
     );
   }
